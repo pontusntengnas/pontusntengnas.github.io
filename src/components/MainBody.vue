@@ -1,33 +1,31 @@
 <template>
   <div id="container">
-    <h1>{{ msg }}</h1>
+    <b-img :src="require('../assets/me.png')" fluid alt="Pontus Nilsson Tengnäs"></b-img>
+    <h1>Pontus Nilsson Tengnäs</h1>
     <p>
       Flexible developer with knowledge of the full stack but a primary focus on app development in general 
       and iOS in particular. Based in Gothenburg, Sweden.
     </p>
-    <h4>Contact</h4>
-    <ul>
-      <li v-for="link in contactLinks" v-bind:key="link.url">
-        <a v-bind:href="`${link.url}`" target="_blank">{{ link.label }}</a>
-      </li>
-    </ul>
+    <Skills/>
+    <Contact/>
   </div>
+  
 </template>
 
 <script lang="ts">
 
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import { Link } from '../models/link';
+import Contact from "./Contact.vue";
+import Skills from "./Skills.vue";
 
-@Component
-export default class MainBody extends Vue {
-  @Prop() private msg!: string;
+@Component({
+  components: {
+    Contact,
+    Skills
+  },
+})
+export default class MainBody extends Vue { }
 
-  private contactLinks: Link[] = [
-    new Link('https://www.linkedin.com/in/pontus-nilsson-tengn%C3%A4s/', 'LinkedIn'),
-    new Link('https://github.com/pontusntengnas', 'GitHub'),
-  ];
-}
 </script>
 
 <style scoped lang="scss">
@@ -41,19 +39,5 @@ export default class MainBody extends Vue {
   h1 {
     font-size: 60px;
   }
-}
-h4 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
 }
 </style>
