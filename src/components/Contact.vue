@@ -19,6 +19,7 @@ export default class Contact extends Vue {
   private contactLinks: Link[] = [
     new Link('https://www.linkedin.com/in/pontus-nilsson-tengn%C3%A4s/', 'LinkedIn'),
     new Link('https://github.com/pontusntengnas', 'GitHub'),
+    new Link('https://stackoverflow.com/users/8639272/pontusnt', 'StackOverflow'),
     new Link('https://itunes.apple.com/se/developer/pontus-nilsson-tengnas/id1356267707', 'Apple App Store'),
   ];
 }
