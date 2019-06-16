@@ -8,6 +8,7 @@
     </p>
     <Skills/>
     <Contact/>
+    <router-link to="/acknowledgments" id="acknowledgments">Acknowledgments</router-link>
   </div>
   
 </template>
@@ -15,13 +16,13 @@
 <script lang="ts">
 
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import Contact from "./Contact.vue";
-import Skills from "./Skills.vue";
+import Contact from './Contact.vue';
+import Skills from './Skills.vue';
 
 @Component({
   components: {
     Contact,
-    Skills
+    Skills,
   },
 })
 export default class MainBody extends Vue { }

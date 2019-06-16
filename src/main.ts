@@ -6,9 +6,8 @@ import App from './App.vue';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import BootstrapVue from 'bootstrap-vue';
-import VueRouter from 'vue-router'
+import VueRouter from 'vue-router';
 import MainBody from './components/MainBody.vue';
-import Contact from './components/Contact.vue'
 import Acknowledgments from './components/Acknowledgments.vue';
 
 Vue.config.productionTip = false;
@@ -16,13 +15,13 @@ Vue.use(BootstrapVue);
 Vue.use(VueRouter);
 
 const routes = [
-  { path: '/', component: MainBody, Contact },
-  { path: '/acknowledgments', component: Acknowledgments }
-]
+  { path: '/', component: MainBody },
+  { path: '/acknowledgments', component: Acknowledgments },
+];
 
 const router = new VueRouter({
-  routes
-})
+  routes,
+});
 
 new Vue({
   router,

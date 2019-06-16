@@ -20,7 +20,7 @@ export default class SkillPill extends Vue {
 
 .pill {
   border-radius: 10px;
-  border: 1px solid #42b983;
+  border: 1px solid $primary-color;
   width: fit-content;
   height: 30px;
   padding-left: 10px;
@@ -31,7 +31,7 @@ export default class SkillPill extends Vue {
   transition: background-color 0.5s ease;
   &:hover {
       color:white;
-      background-color: #42b983;
+      background-color: $primary-color;
     }
 }
 p {

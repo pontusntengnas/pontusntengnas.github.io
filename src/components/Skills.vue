@@ -15,7 +15,7 @@ import SkillPill from './SkillPill.vue';
 
 @Component({
   components: {
-    SkillPill
+    SkillPill,
   },
 })
 export default class Skills extends Vue {
