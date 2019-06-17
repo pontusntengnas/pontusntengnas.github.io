@@ -41,4 +41,7 @@ export default class MainBody extends Vue { }
     font-size: 60px;
   }
 }
+p {
+  margin: 0 8%;
+}
 </style>

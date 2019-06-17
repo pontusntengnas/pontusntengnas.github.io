@@ -28,8 +28,7 @@ export default class App extends Vue {}
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 30px;
+  margin-top: 5%;
   a {
     color: $primary-color;
   }
@@ -37,11 +36,8 @@ export default class App extends Vue {}
     width: 30%;
     margin-block-end: 3%;
   }
-  #container p {
-    margin: 0 20px;
-  }
   #container {
-    margin-bottom: 30px;
+    margin-bottom: 4%;
   }
 }
 </style>

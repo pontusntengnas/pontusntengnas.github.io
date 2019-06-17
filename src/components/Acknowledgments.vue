@@ -1,13 +1,9 @@
 <template>
   <div>
     <div class="header">
-      <b-container class="bv">
-        <b-row align-h="start">
-          <canvas ref="backArrow" width="40" height="40"></canvas>
-          <b-col cols="4"><router-link to="/" id="link-back">Back</router-link></b-col>
-          <b-col cols="4"  offset-md="0"><h4 id="title">Licenses</h4></b-col>
-        </b-row>
-      </b-container>
+      <canvas id="back-arrow" ref="backArrow" @click="backPressed" width="40" height="40"></canvas>
+       <h4 id="title">Licenses</h4>
+       <canvas id="_invisible_canvas" width="40" height="40"></canvas>
     </div>
     <p>This app was created with the following amazing products:</p>
     <div class="licenses-list">
@@ -144,7 +140,11 @@ export default class Acknowledgments extends Vue {
   ].sort((a, b) => a.title.localeCompare(b.title));
 
   private mounted() {
-    // this.drawArrow();
+    this.drawArrow();
+  }
+
+  private backPressed() {
+    return this.$router.back();
   }
 
   private drawArrow() {
@@ -154,17 +154,33 @@ export default class Acknowledgments extends Vue {
       return;
     }
 
-    arrowCtx.moveTo(0, 20);
-    arrowCtx.fillRect(0, 0, 10, 10);
+    arrowCtx.strokeStyle = '#c69393';
+    arrowCtx.lineWidth = 2;
+    arrowCtx.lineCap = 'round';
+    arrowCtx.moveTo(10, 1);
+    arrowCtx.lineTo(2, 9);
+    arrowCtx.lineTo(10, 17);
+    arrowCtx.moveTo(2, 9);
+    arrowCtx.lineTo(24, 9);
+    arrowCtx.stroke();
   }
 }
 
 </script>
 
 <style scoped lang="scss">
+.header {
+  margin: 0px 5%;
+  display: flex;
+  justify-content: space-between;
+}
+#back-arrow {
+  background-color: red($color: #000000);
+  color:red;
+}
 .licenses-list {
   text-align: left;
-  margin: 40px 60px;
+  margin: 40px 5%;
 }
 .license-container{
   background-color: $primary-gray;
