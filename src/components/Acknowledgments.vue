@@ -168,11 +168,11 @@ export default class Acknowledgments extends Vue {
       arrow.style.cursor = 'pointer';
       arrow.style.transition = '0.4s';
       arrow.style.opacity = '0.6';
-    }
+    };
 
     arrow.onmouseleave = () => {
       arrow.style.opacity = '1';
-    }
+    };
   }
 }
 
