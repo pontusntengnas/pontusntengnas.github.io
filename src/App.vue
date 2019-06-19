@@ -32,10 +32,6 @@ export default class App extends Vue {}
   a {
     color: $primary-color;
   }
-  img {
-    width: 30%;
-    margin-block-end: 3%;
-  }
   #container {
     margin-bottom: 4%;
   }

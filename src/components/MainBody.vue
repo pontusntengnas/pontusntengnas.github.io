@@ -1,6 +1,6 @@
 <template>
   <div id="container">
-    <b-img :src="require('../assets/me.png')" fluid alt="Pontus Nilsson Tengnäs"></b-img>
+    <img :src="require('../assets/me.png')" fluid alt="Pontus Nilsson Tengnäs"/>
     <h1>Pontus Nilsson Tengnäs</h1>
     <p>
       Flexible developer with knowledge of the full stack but a primary focus on app development in general 
@@ -31,9 +31,20 @@ export default class MainBody extends Vue { }
 
 <style scoped lang="scss">
 
+p {
+  margin: 0 8%;
+}
+img {
+  width: 20%;
+  margin-block-end: 3%;
+}
+
 @media screen and (max-width: 600px) {
   h1 {
     font-size: 30px;
+  }
+  img {
+    width: 30%;
   }
 }
 @media screen and (min-width: 1500px) {
@@ -41,7 +52,5 @@ export default class MainBody extends Vue { }
     font-size: 60px;
   }
 }
-p {
-  margin: 0 8%;
-}
+
 </style>
