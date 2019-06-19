@@ -30,9 +30,9 @@ export default class SkillPill extends Vue {
   transition: color 0.5s ease;
   transition: background-color 0.5s ease;
   &:hover {
-      color:white;
-      background-color: $primary-color;
-    }
+    color:white;
+    background-color: $primary-color;
+  }
 }
 p {
   text-align: center;

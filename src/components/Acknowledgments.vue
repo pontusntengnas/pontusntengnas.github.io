@@ -163,6 +163,16 @@ export default class Acknowledgments extends Vue {
     arrowCtx.moveTo(2, 9);
     arrowCtx.lineTo(24, 9);
     arrowCtx.stroke();
+
+    arrow.onmousemove = () => {
+      arrow.style.cursor = 'pointer';
+      arrow.style.transition = '0.4s';
+      arrow.style.opacity = '0.6';
+    }
+
+    arrow.onmouseleave = () => {
+      arrow.style.opacity = '1';
+    }
   }
 }
 
@@ -173,10 +183,6 @@ export default class Acknowledgments extends Vue {
   margin: 0px 5%;
   display: flex;
   justify-content: space-between;
-}
-#back-arrow {
-  background-color: red($color: #000000);
-  color:red;
 }
 .licenses-list {
   text-align: left;
