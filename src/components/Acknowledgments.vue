@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="header">
-      <canvas id="back-arrow" ref="backArrow" @click="backPressed" width="40" height="40"></canvas>
+      <canvas id="back-arrow" ref="backArrow" @click="backPressed" width="50" height="50"></canvas>
        <h4 id="title">Licenses</h4>
        <canvas id="_invisible_canvas" width="40" height="40"></canvas>
     </div>
@@ -29,24 +29,6 @@ import { Acknowledgment } from './../models/acknowledgment';
 @Component
 export default class Acknowledgments extends Vue {
   private acknowledgments: Acknowledgment[] = [
-    new Acknowledgment('BootstrapVue', 'https://github.com/bootstrap-vue/bootstrap-vue',
-      ['The MIT License (MIT)',
-      'Copyright (c) 2016-2019 - BootstrapVue',
-      `Permission is hereby granted, free of charge, to any person obtaining a copy
-      of this software and associated documentation files (the "Software"), to deal
-      in the Software without restriction, including without limitation the rights
-      to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-      copies of the Software, and to permit persons to whom the Software is
-      furnished to do so, subject to the following conditions:`,
-      `The above copyright notice and this permission notice shall be included in all
-      copies or substantial portions of the Software.`,
-      `THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-      IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-      FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-      AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-      LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-      OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-      SOFTWARE.`]),
     new Acknowledgment('Vue.js', 'https://github.com/vuejs/vue',
       ['The MIT License (MIT)',
       'Copyright (c) 2013-present, Yuxi (Evan) You',
@@ -154,14 +136,17 @@ export default class Acknowledgments extends Vue {
       return;
     }
 
+    const w = arrow.width;
+    const h = arrow.height;
+
     arrowCtx.strokeStyle = '#c69393';
-    arrowCtx.lineWidth = 2;
+    arrowCtx.lineWidth = 4;
     arrowCtx.lineCap = 'round';
-    arrowCtx.moveTo(10, 1);
-    arrowCtx.lineTo(2, 9);
-    arrowCtx.lineTo(10, 17);
-    arrowCtx.moveTo(2, 9);
-    arrowCtx.lineTo(24, 9);
+    arrowCtx.moveTo(w * 0.3, 1);
+    arrowCtx.lineTo(2, h * 0.5);
+    arrowCtx.lineTo(w * 0.3, h - 1);
+    arrowCtx.moveTo(2, h * 0.5);
+    arrowCtx.lineTo(w - 1, h * 0.5);
     arrowCtx.stroke();
 
     arrow.onmousemove = () => {
@@ -201,5 +186,10 @@ export default class Acknowledgments extends Vue {
 }
 h5 {
   margin-top: 20px;
+}
+#back-arrow {
+  height: 25px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 </style>

@@ -36,7 +36,6 @@ p {
 }
 img {
   width: 20%;
-  margin-block-end: 3%;
 }
 
 @media screen and (max-width: 600px) {

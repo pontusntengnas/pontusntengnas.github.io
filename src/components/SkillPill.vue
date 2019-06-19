@@ -19,6 +19,9 @@ export default class SkillPill extends Vue {
 <style scoped lang="scss">
 
 .pill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
   border: 1px solid $primary-color;
   width: fit-content;
@@ -33,10 +36,6 @@ export default class SkillPill extends Vue {
     color:white;
     background-color: $primary-color;
   }
-}
-p {
-  text-align: center;
-  line-height: 30px;
 }
 
 </style>
