@@ -18,6 +18,7 @@ import SkillPill from './SkillPill.vue';
     SkillPill,
   },
 })
+
 export default class Skills extends Vue {
   private skills: Skill[] = [
     new Skill('Swift', '#4286f4'),

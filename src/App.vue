@@ -9,12 +9,14 @@ import { Component, Vue } from 'vue-property-decorator';
 import MainBody from './components/MainBody.vue';
 import Contact from './components/Contact.vue';
 import Skills from './components/Skills.vue';
+import Resume from './components/Resume.vue';
 
 @Component({
   components: {
     MainBody,
     Contact,
     Skills,
+    Resume,
   },
 })
 

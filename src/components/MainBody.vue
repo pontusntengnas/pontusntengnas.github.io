@@ -7,6 +7,7 @@
       and iOS in particular. Based in Gothenburg, Sweden.
     </p>
     <Skills/>
+    <Resume/>
     <Contact/>
     <router-link to="/acknowledgments" id="acknowledgments">Acknowledgments</router-link>
   </div>
@@ -18,11 +19,13 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import Contact from './Contact.vue';
 import Skills from './Skills.vue';
+import Resume from './Resume.vue';
 
 @Component({
   components: {
     Contact,
     Skills,
+    Resume,
   },
 })
 export default class MainBody extends Vue { }
