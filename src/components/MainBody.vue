@@ -3,7 +3,7 @@
     <img :src="require('../assets/me.png')" fluid alt="Pontus Nilsson Tengnäs"/>
     <h1>Pontus Nilsson Tengnäs</h1>
     <p>
-      Flexible developer with knowledge of the full stack but a primary focus on app development in general 
+      Flexible full-stack developer with a primary focus on front-end development in general 
       and iOS in particular. Based in Gothenburg, Sweden.
     </p>
     <Skills/>
