@@ -1,7 +1,9 @@
 * {
   font-family: Avenir,Helvetica,Arial,sans-serif;
-  
-  --main: #c69393; 
+}
+
+body {
+  background-color: var(--background);
 }
 
 .wrapper {
@@ -9,6 +11,7 @@
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  color: var(--font-color);
 }
 
 .container {

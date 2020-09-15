@@ -1,0 +1,1 @@
+html-minifier -o index.html -c .html-minifer-cfg.conf index.pretty.html
