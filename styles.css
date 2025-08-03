@@ -24,6 +24,10 @@ h1 {
     font-size: 46px;
 }
 
+h4 {
+    margin-bottom: 0.4em;
+}
+
 ul {
     list-style-type: none;
     padding-inline-start: 0;
@@ -46,8 +50,4 @@ ul {
 .date {
     font-size: 0.9rem;
     color: var(--gray);
-}
-
-h4 {
-    margin-bottom: 0.4em;
 }
