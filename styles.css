@@ -1,14 +1,44 @@
 :root {
     --main: #756dff;
-    --secondary: #756dff;
+    --secondary: #c9c9c9;
     --gray: #666;
     --text: #383847;
+    --background: #fff;
+}
+
+:root.dark-mode {
+    --main: #756dff;
+    --secondary: #fff;
+    --gray: #c9c9c9;
+    --text: #fff;
+    --background: #383847;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main: #756dff;
+        --secondary: #fff;
+        --gray: #c9c9c9;
+        --text: #fff;
+        --background: #383847;
+    }
+
+    :root.light-mode {
+        --main: #756dff;
+        --secondary: #c9c9c9;
+        --gray: #666;
+        --text: #383847;
+        --background: #fff;
+    }
 }
 
 body {
+    background-color: var(--background);
+    font-size: 26px;
     font-family: system-ui;
     padding: 10%;
     color: var(--text);
+    transition: background-color 0.35s ease;
 }
 
 a:link {
@@ -17,20 +47,15 @@ a:link {
 }
 
 a:visited {
-    color: var(--secondary);
+    color: var(--main);
 }
 
-h1 {
-    font-size: 46px;
+a:hover {
+    background-color: var(--secondary);
 }
 
 h4 {
     margin-bottom: 0.4em;
-}
-
-ul {
-    list-style-type: none;
-    padding-inline-start: 0;
 }
 
 @media screen and (max-width: 600px) {
@@ -48,6 +73,6 @@ ul {
 }
 
 .date {
-    font-size: 0.9rem;
+    margin-top: 0px;
     color: var(--gray);
 }
