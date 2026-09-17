@@ -50,10 +50,6 @@ a:visited {
     color: var(--main);
 }
 
-a:hover {
-    background-color: var(--secondary);
-}
-
 h4 {
     margin-bottom: 0.4em;
 }
@@ -75,4 +71,12 @@ h4 {
 .date {
     margin-top: 0px;
     color: var(--gray);
+}
+
+.link:hover {
+    background-color: var(--secondary);
+}
+
+.link:active {
+    background-color: var(--secondary);
 }
